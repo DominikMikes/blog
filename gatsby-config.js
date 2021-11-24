@@ -5,12 +5,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "",
-      },
-    },
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -30,5 +24,6 @@ module.exports = {
       },
       __key: "pages",
     },
+    "gatsby-plugin-mdx",
   ],
 };
