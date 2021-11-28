@@ -1,25 +1,22 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
+import BlogCard from '../../components/blog-card/blog-card'
+
+import './blog.css'
 
 const BlogPage = ({data}) => {
   return (
-    <Layout pageTitle="My Blog Posts">
-      <p>My cool posts will go in here</p>
-      <ul>
+    <Layout pageTitle="Blog Posts">
+      <div className="blog-cards-wrapper">
       {
-          data.allMdx.nodes.map(node => (
+          data.allMdx.nodes.map(node => (            
             <article key={node.id}>
-              <h2>
-                <Link to={`/blog/${node.slug}`}>
-                  {node.frontmatter.title}
-                </Link>
-              </h2>
-              <p>Posted: {node.frontmatter.date}</p>
+              <BlogCard node={node}></BlogCard>
             </article>
           ))
       }
-      </ul>
+      </div>
     </Layout>
   )
 }
@@ -32,6 +29,12 @@ export const query = graphql`
         frontmatter {
           title
           date(formatString: "DD/MM/YYYY")
+          hero_image_alt
+          hero_image_thumb {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         body
         slug

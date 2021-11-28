@@ -1,9 +1,19 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+
 const AboutPage = () => {
   return (
     <Layout pageTitle="About Me">
-      <p>Hi there! I'm the proud creator of this site, which I built with Gatsby.</p>
+      <Container maxWidth="sm">
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Gatsby v5 example
+          </Typography>
+        </Box>
+      </Container>
     </Layout>
   )
 }

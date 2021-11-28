@@ -1,6 +1,6 @@
 .container {
     margin: auto;
-    max-width: 500px;
+    max-width: 1000px;
     font-family: sans-serif;
   }
   
@@ -24,4 +24,9 @@
     color: gray;
     font-weight: 700;
     margin: 3rem 0;
+  }
+
+  a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
   }

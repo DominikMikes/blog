@@ -1,0 +1,4 @@
+.blog-cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+}

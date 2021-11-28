@@ -31,6 +31,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp"
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-material-ui"
   ],
 };
